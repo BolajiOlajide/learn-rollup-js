@@ -6,8 +6,12 @@ import addArray from './modules/mod2';
 import debug from 'debug';
 const log = debug('app:log');
 
-debug.enable('*');
-log('Logging is enabled!');
+if (ENV !== 'production') {
+  debug.enable('*');
+  log('Logging is enabled!');
+} else {
+  debug.disable();
+}
 
 // Run some functions from our imported modules.
 const result1 = sayHelloTo('Jason');

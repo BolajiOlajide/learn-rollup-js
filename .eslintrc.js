@@ -4,7 +4,8 @@ module.exports = {
         "es6": true
     },
     "globals": {
-      "ENV": true
+      "ENV": true,
+      "process": true
     },
     "extends": "eslint:recommended",
     "parserOptions": {
